@@ -1,9 +1,8 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo} from 'react';
 import {Box, useMediaQuery, useTheme} from "@mui/material";
 import Header from "../../components/Header";
 import {useDispatch, useSelector} from "react-redux";
 import {getOverview} from "../../features/admin/admin.actions";
-import DatePicker from "react-datepicker";
 import {ResponsiveLine} from "@nivo/line";
 
 const Monthly = () => {

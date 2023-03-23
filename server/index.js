@@ -10,20 +10,6 @@ import clientRoutes from "./routes/client.routes.js";
 import salesRoutes from "./routes/sales.routes.js";
 import generalRoutes from "./routes/general.routes.js";
 import managementRoutes from "./routes/management.routes.js";
-import {
-    dataAffiliateStat,
-    dataOverallStat,
-    dataProduct,
-    dataProductStat,
-    dataTransaction,
-    dataUser
-} from "./data/index.js";
-import User from './models/user.model.js'
-import Product from "./models/product.model.js";
-import ProductStat from "./models/product.stat.model.js";
-import TransactionModel from "./models/transaction.model.js";
-import AffiliateStatModel from "./models/affiliate.stat.model.js";
-import OverallStatModel from "./models/overall.stat.model.js";
 
 
 //CONFIGURATION
@@ -55,12 +41,6 @@ mongoose.connect(process.env.MONGO_URL,{
     .then((res)=>{
         console.log(`mongodb host: ${res.connection.host}`)
     app.listen(port, ()=>console.log("Server Connected: " + port))
-        // User.insertMany(dataUser)
-        // Product.insertMany(dataProduct)
-        // ProductStat.insertMany(dataProductStat)
-        // TransactionModel.insertMany(dataTransaction)
-        // overallStateModel.insertMany(dataOverallStat);
-        // AffiliateStatModel.insertMany(dataAffiliateStat)
 })
     .catch(err=>{
         console.log(`${err} did not connected to the mongodb and server`)
