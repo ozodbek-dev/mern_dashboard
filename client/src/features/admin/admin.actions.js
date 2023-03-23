@@ -7,7 +7,7 @@ import {
     getTransactionsSuccess, getAdminsSuccess, getPerformanceSuccess, getDashboardSuccess, dashboardReq
 } from "./admin.slice";
 import axios, {get} from 'axios';
-const url = "http://localhost:5001"
+const url = process.env.REACT_APP_API ||  "http://localhost:5001"
 export const getUser =(id)=> async (dispatch)=>{
     try {
         dispatch(getSingleUserReq())
